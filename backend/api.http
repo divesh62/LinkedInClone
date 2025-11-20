@@ -1,0 +1,59 @@
+###
+POST http://localhost:9000/login HTTP/1.1
+Content-Type: application/json
+
+{
+    "username": "pooja1234",
+    "password": "1234"
+}
+
+###
+
+POST http://localhost:9000/register HTTP/1.1
+Content-Type: application/json
+
+{
+    "name": "Pooja ji",
+    "email": "raj123@gmail.com",
+    "username": "pooja1234",
+    "password": "12"
+    
+}
+
+
+###
+
+GET http://localhost:9000/get_user_and_profile HTTP/1.1
+Content-Type: application/json
+
+{
+    "token": "8c53693efd29cab55e9a23ba35ed5b1c2e7f853be6e7d245b2ab3090b2a806f9"
+}
+
+###
+
+POST http://localhost:9000/update_profile_data HTTP/1.1
+Content-Type: application/json
+
+{
+    "token": "804f9f9d133e0656ef5f6e32f44ed18ab97c14d01e29fe51af68f3a42eff2655",
+    "bio":"Hello i a Pooja ji",
+    "currentPost":"CTO",
+    "pastWork": [
+        {
+            "company":" Microsoft",
+            "position":"CTO",
+            "years":"+2"
+        }
+    ],
+    "education": [
+        {
+            "school":"IIT",
+            "degree":"B-tech",
+            "fieldOfStudy":"2017-2021"
+        }
+    ] 
+}
+
+### 
+GET http://localhost:9000/user/get_all_user_profile HTTP/1.1
